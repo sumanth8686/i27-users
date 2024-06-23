@@ -40,7 +40,7 @@ pipeline {
         //version+ packaging
         DOCKER_HUB = "docker.io/i27devopsb2"
         DOCKER_CREDS = credentials('i27devopsb2_docker_creds')
-        SONAR_URL = "http://34.122.97.102:9000"
+        SONAR_URL = "http://34.125.104.132:9000/"
         SONAR_TOKEN = credentials('sonar_creds')
     }
     tools {
