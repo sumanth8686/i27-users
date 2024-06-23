@@ -38,8 +38,8 @@ pipeline {
         POM_VERSION = readMavenPom().getVersion()
         POM_PACKAGING = readMavenPom().getPackaging()
         //version+ packaging
-        DOCKER_HUB = "docker.io/i27devopsb2"
-        DOCKER_CREDS = credentials('i27devopsb2_docker_creds')
+        DOCKER_HUB = "docker.io/sumanth9677"
+        DOCKER_CREDS = credentials('sumanth9677_docker_creds')
         SONAR_URL = "http://34.125.104.132:9000/"
         SONAR_TOKEN = credentials('sonar_creds')
     }
@@ -195,7 +195,7 @@ pipeline {
             }
             steps {
                 timeout(time: 300, unit: 'SECONDS') {
-                    input message: "Deploying ${env.APPLICATION_NAME} to prod ????", ok: 'yes', submitter: 'krish'
+                    input message: "Deploying ${env.APPLICATION_NAME} to prod ????", ok: 'yes', submitter: 'sumanth'
                 }
                 script {
                     imageValidation().call()
